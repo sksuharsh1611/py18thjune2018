@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import commands,time
 '''
 #raw_input always accept data in string format
 n=raw_input("please enter a number: ")
@@ -23,8 +24,15 @@ print option
 x=raw_input()
 
 if x == '1' :
-	print "please wait internet cable is being checked.."
-
+	print "please wait internet cable is being checked by current OS.."
+	time.sleep(3)	
+	cable_check=commands.getoutput('sudo mii-tool eno1')
+	if 'link ok' in cable_check:
+		print "Lan cable is cOnnected"
+		
+	else:
+		print "Lan Cable is not cOnnected"
+		
 elif x == '2' :
 	print "Internet connectivity is checking in a while"
 
