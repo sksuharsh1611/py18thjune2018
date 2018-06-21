@@ -38,6 +38,7 @@ elif x == '2' :
 
 elif x == '3' :
 	print "Loading Google web page //"
+	find=raw_input("enter your query : ")
 	webbrowser.open_new_tab("https://www.google.com/search?q="+find)
 
 else :
