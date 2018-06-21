@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import commands,time
+import commands,time,webbrowser
 '''
 #raw_input always accept data in string format
 n=raw_input("please enter a number: ")
@@ -38,6 +38,7 @@ elif x == '2' :
 
 elif x == '3' :
 	print "Loading Google web page //"
+	webbrowser.open_new_tab("https://www.google.com/search?q="+find)
 
 else :
 	print  "wrong option" 
