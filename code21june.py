@@ -16,13 +16,14 @@ press 8: To list Ip Addresses of given Website:
 '''
 print  menu
 
-choice=raw_input()
+choice=raw_input("Enter your choice:")
 
 if  choice  ==  '1' :
 	print  "current date and time is :   ",time.ctime()
 
-#elif choice == '2' :
-	#print "mac address is : ", sudo nmap -sn 192.168.43.137
+elif choice == '2' : 
+	x=commands.getoutput('cat /sys/class/net/*/address')
+	print x
 
 elif choice == '3' :
 	print "Your system is being shutting down after 15 minutes"
@@ -32,16 +33,26 @@ elif choice == '3' :
 elif  choice  ==  '4' :
 	find=raw_input("enter your query : ")
 	webbrowser.open_new_tab("https://www.google.com/search?q="+find)
+
 elif choice == '5' :
-	print "logging out your current machine: "
+	print "logging out from your current machine: "
 	commands.getoutput("exit")
 
-'''elif choice == '6' :
-elif choice == '7' :
+#elif choice == '6' :
+
+elif choice == '7':
+	print "update status in facebook"
+	username=raw_input("enter your username : ")
+	passwd=raw_input("enter your password : ")	
+	webbrowser.open_new_tab("https://touch.facebook.com/login/")
+
 elif choice == '8' :
-'''
-'''else :
+	web=raw_input("enter your website : ")
+	ip=commands.getoutput("host "+web)
+	print ip
+
+else :
 	print  "Invalid OPtion"
-'''
+
 
 
