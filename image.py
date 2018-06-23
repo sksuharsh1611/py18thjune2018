@@ -34,7 +34,7 @@ cv2.imshow("newok",img2)
 cv2.imwrite("bac.jpg",img1)
 
 # image window holder activate
-cv2.waitkey(0)
+cv2.waitKey(0)
 
 
 # waitkey will destroy by using q button
